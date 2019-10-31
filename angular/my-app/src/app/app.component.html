@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../assets/css/materialize.min.css" />
+  <title>Autores</title>
+</head>
+<body>
+   <div class="container">
+      <h3 class="blue-text center-align">Lista de Autores</h3>
+
+      <ul class="collection" *ngFor="let autor of autores">
+          <li class="collection-item">{{autor.nome}}</li>
+          <li class="collection-item">{{autor.endereco}}</li>
+          <li class="collection-item" *ngIf="autor.site">{{autor.site}}</li>
+          <li class="collection-item red-text" *ngIf="!autor.site">Site não informado</li>
+          <li class="collection-item">{{autor.email}}</li>
+      </ul>
+      <br />
+   </div>
+
+
+</body>
+</html>
+
+
+<router-outlet></router-outlet>
